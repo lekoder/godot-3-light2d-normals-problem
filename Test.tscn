@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://resources/asteroid1-color.png" type="Texture" id=1]
+[ext_resource path="res://resources/asteroid1-normal.png" type="Texture" id=2]
+[ext_resource path="res://resources/light.png" type="Texture" id=3]
+
+[node name="Node" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+position = Vector2( 432.665, 297.329 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+position = Vector2( 876.557, 319.813 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 1.0
+angular_damp = 0.0
+_sections_unfolded = [ "Angular" ]
+
+[node name="Light2D" type="Light2D" parent="RigidBody2D"]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 3.0
+color = Color( 1, 1, 1, 1 )
+energy = 5.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+
